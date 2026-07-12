@@ -1,17 +1,17 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { PROFILE_IMAGE_PATH, SITE_DESCRIPTION, SITE_NAME, SITE_ORIGIN } from "../lib/site";
+import { PROFILE_IMAGE_PATH, SITE_DESCRIPTION, SITE_NAME, SITE_ORIGIN, SITE_TITLE } from "../lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
-  title: SITE_NAME,
+  title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: SITE_NAME,
+    title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     url: "/",
     siteName: SITE_NAME,
@@ -28,13 +28,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: SITE_NAME,
+    title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: [PROFILE_IMAGE_PATH],
   },
   robots: {
     index: true,
     follow: true,
+  },
+  icons: {
+    icon: PROFILE_IMAGE_PATH,
+    apple: PROFILE_IMAGE_PATH,
   },
 };
 export const viewport: Viewport = {

@@ -8,6 +8,7 @@ function normalizeSiteOrigin(origin: string | undefined) {
 
 export const SITE_ORIGIN = normalizeSiteOrigin(process.env.NEXT_PUBLIC_SITE_ORIGIN);
 export const SITE_NAME = "danandjun.com";
+export const SITE_TITLE = "Dan & Jun";
 export const SITE_DESCRIPTION =
   "Dan and Jun are software engineers sharing practical lessons from building software in big tech.";
 export const PROFILE_IMAGE_PATH = "/assets/images/profilepic2.jpg";

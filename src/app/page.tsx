@@ -1,5 +1,6 @@
 import { InstagramIcon } from "./icons/InstagramIcon";
 import { YouTubeIcon } from "./icons/YouTubeIcon";
+import { PROFILE_IMAGE_PATH } from "../lib/site";
 
 export default function Page() {
   const socials = [
@@ -32,7 +33,9 @@ export default function Page() {
           <img
             alt="Dan and Jun"
             className="h-64 w-64 shrink-0 rounded-3xl object-cover shadow-[var(--shadow-001)] max-md:h-auto max-md:w-full"
-            src="/assets/images/profilepic2.png"
+            height="800"
+            src={PROFILE_IMAGE_PATH}
+            width="800"
           />
         </div>
         <section className="flex flex-col gap-4 border-t border-border pt-8 text-lg leading-7">
@@ -44,6 +47,7 @@ export default function Page() {
               <li key={social.href}>
                 <a
                   aria-label={`${social.label}: ${social.handle}`}
+                  title={social.handle}
                   className="group relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-001)] transition hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
                   href={social.href}
                   rel="noopener noreferrer"
